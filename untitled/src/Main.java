@@ -1,17 +1,31 @@
+import java.util.ArrayList;
+import java.util.List;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        List<Integer> neuclo = new ArrayList<Integer>();
+        neuclo.add(5);
+        neuclo.add(3);
+        neuclo.add(7);
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        List<Integer> tido = new ArrayList<Integer>();
+        tido.add(4);
+        tido.add(5);
+        tido.add(9);
+        tido.add(2);
+        List<List<Integer>> lista = new ArrayList<List<Integer>>();
+        lista.add(neuclo);
+        lista.add(tido);
+
+        AlgoritmoGenomaHumanoImplementation imple = new AlgoritmoGenomaHumanoImplementation();
+
+        List<Integer> result = imple.encontrarGenomaHumano(lista,40,78);
+
+        result.forEach( i -> {System.out.println(i);} );
+
+
         }
     }
-}
